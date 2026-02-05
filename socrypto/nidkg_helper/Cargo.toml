@@ -1,0 +1,43 @@
+[package]
+name = "nidkg_helper"
+version = "0.4.0"
+edition.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bench]]
+name = "cg_key_serde"
+harness = false
+
+[dependencies]
+erasure.workspace = true
+vec_commitment.workspace = true
+crypto = { workspace = true }
+bicycl = { workspace = true }
+miracl_core_bn_eth = { workspace = true }
+miracl_core_bls12381 = { workspace = true }
+miracl_core_ed25519 = { workspace = true }
+blst.workspace = true
+anyhow = { workspace = true }
+rand = { workspace = true }
+rand_chacha = { workspace = true }
+bincode = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+array-init = { workspace = true }
+thiserror = { workspace = true }
+base64.workspace = true
+log.workspace = true
+hex.workspace = true
+tiny-keccak = { workspace = true }
+zeroize = { workspace = true }
+socrypto-core = { workspace = true }
+ed25519-dalek = { workspace = true, features = ["batch", "rand_core"] }
+
+sha3 = { workspace = true }
+blsttc = { workspace = true }
+lazy_static = { workspace = true }
+itertools = "0.10.5"
+
+[dev-dependencies]
+rayon = { workspace = true }
+criterion = { workspace = true, features = ["async_futures", "async_tokio", "html_reports"] }

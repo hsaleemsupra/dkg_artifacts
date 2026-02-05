@@ -1,0 +1,22 @@
+[package]
+name = "batch"
+version = "0.2.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.28.0", features = ["full"]}
+env_logger = { version = "0.9.1" }
+log = { version = "0.4.17" }
+rand = { version = "0.8.5" }
+serde = { version = "1.0.147" }
+serde_with = { version = "3.0.0"}
+
+primitives = { version = "0.2.0", path = "../primitives" }
+x-rbc = { version = "0.2.0", path = "../x-rbc"}
+storage = {version = "0.1.0", path = "../storage" }
+
+[features]
+default = []
+test = []

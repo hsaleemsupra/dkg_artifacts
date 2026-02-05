@@ -1,0 +1,23 @@
+[profile.release]
+strip = true
+
+[profile.bench]
+opt-level = 3
+debug = false
+
+[workspace]
+
+members= [
+    "node",
+    "x-rbc",
+    "primitives",
+    "network",
+    "erasure",
+    "vec-commitment",
+    "batch",
+    "block",
+    "crypto",
+    "storage",
+    "metrics",
+    "metrics-logger"
+]

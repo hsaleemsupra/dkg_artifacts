@@ -1,0 +1,47 @@
+{
+  "network_config": {
+    "tribes": 1,
+    "clans": 5,
+    "clan_size": 7,
+    "proposers_per_tribe": 1,
+    "proposers_per_clan": 7
+  },
+  "dkg_config": {
+    "threshold": 4,
+    "participants": 7
+  },
+  "batch_config": {
+    "rule": {
+      "Infinite": {
+        "timeout_in_secs": 0.25
+      }
+    },
+    "size_in_bytes": 2000000
+  },
+  "block_config": {
+    "timeout_in_secs": 3,
+    "batch_count": 20
+  },
+  "delivery_config": {
+    "Rs16": {
+      "committee_erasure_config": {
+        "data_shards": 4,
+        "parity_shards": 3
+      },
+      "network_erasure_config": {
+        "data_shards": 17,
+        "parity_shards": 11
+      },
+      "garbage_collector_config": {
+        "task_stale_timeout": 60,
+        "garbage_collection_timeout": 10
+      },
+      "state_idle_time_config": {
+        "state_idle_timeout": 3
+      },
+      "dissemination_rule": {
+        "Partial": "All"
+      }
+    }
+  }
+}

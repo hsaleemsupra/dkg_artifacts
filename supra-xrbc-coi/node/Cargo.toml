@@ -1,0 +1,33 @@
+[package]
+name = "supra-node"
+version = "0.2.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.28.0", features = ["full"]}
+ed25519-dalek = { version = "1.0.1" }
+env_logger = "0.9.1"
+log = { version = "0.4.17" }
+serde = { version = "1.0.147" }
+serde_json = { version = "1.0.87" }
+async-trait = { version = "0.1.59" }
+bytes = { version = "1.3.0" }
+clap = {version = "4.0.29", features = ["derive"]}
+
+primitives = { version = "0.2.0", path = "../primitives" }
+x-rbc = { version = "0.2.0", path = "../x-rbc" }
+network = { version = "0.2.0", path = "../network" }
+batch = {version = "0.2.0", path = "../batch" }
+crypto = {version = "0.2.0", path = "../crypto" }
+erasure = {version = "0.2.0", path = "../erasure"}
+storage = {version = "0.1.0", path = "../storage"}
+block = {version = "0.1.0", path = "../block"}
+metrics = {version = "0.1.0", path = "../metrics"}
+metrics-logger = {version = "0.1.0", path = "../metrics-logger" }
+
+[build-dependencies]
+network = { version = "0.2.0", path = "../network", features=["test"] }
+crypto = { version = "0.2.0", path = "../crypto", features=["test"] }
+batch = { version = "0.2.0", path = "../batch", features=["test"] }

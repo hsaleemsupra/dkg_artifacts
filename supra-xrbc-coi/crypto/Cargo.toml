@@ -1,0 +1,20 @@
+[package]
+name = "crypto"
+version = "0.2.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ed25519-dalek = { version = "1.0.1", features = ["serde"] }
+rand = { version = "0.7.3"}
+thiserror = { version = "1.0.37" }
+serde = { version = "1.0.147", features = ["derive"] }
+blsttc = {version = "8.0.1" }
+serde-big-array = { version = "0.5.0" }
+
+primitives = { version = "0.2.0", path = "../primitives" }
+
+[features]
+default = []
+test = []

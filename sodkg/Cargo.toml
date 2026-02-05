@@ -1,0 +1,47 @@
+[package]
+name = "sodkg"
+version = "0.4.0"
+edition.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = { workspace = true }
+thiserror = { workspace = true }
+
+socrypto = { workspace = true }
+nidkg_helper = { workspace = true }
+soruntime = { workspace = true }
+# sosmr = { workspace = true }
+crypto = { workspace = true }
+miracl_core_bls12381 = { workspace = true }
+deliver = { workspace = true }
+cs_deliver = { workspace = true }
+
+hex = { workspace = true }
+zeroize = "1.5.7"
+serde = { workspace = true, features = ["derive"] }
+bincode = { workspace = true }
+tokio = { workspace = true }
+
+enum-kinds = { workspace = true }
+chrono = { workspace = true }
+utoipa = { workspace = true, features = ["preserve_order", "non_strict_integers"] }
+lazy_static = { workspace = true }
+sha3 = { workspace = true }
+bcs = { workspace = true }
+soserde = { workspace = true }
+web3 = { workspace = true }
+rand = "0.8.5"
+
+serde_json = { workspace = true }
+[dev-dependencies]
+env_logger = { workspace = true }
+criterion = { workspace = true, features = ["async_futures", "async_tokio", "html_reports"] }
+
+[profile.bench]
+opt-level = 3
+
+[[bench]]
+name = "dkg_bench"
+harness = false

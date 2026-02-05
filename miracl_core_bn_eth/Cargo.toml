@@ -1,0 +1,16 @@
+[package]
+name = "miracl_core_bn_eth"
+version = "0.1.0"
+edition = "2021"
+
+documentation = "https://github.com/miracl/core"
+description = "Apache MIRACL (https://github.com/miracl/core) Rust implementation of Ethereum's version of BN254, aka BN_SNARK1"
+license = "Apache-2.0"
+include = ["src", "Cargo.toml", "LICENSE"]
+
+[dependencies]
+miracl_core_bls12381 = "4.1.2"
+rand="0.8.5"
+
+[features]
+std = []

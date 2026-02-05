@@ -1,0 +1,15 @@
+[package]
+name = "erasure"
+version = "0.2.0"
+edition = "2021"
+
+[dependencies]
+thiserror = { version = "1.0.37" }
+reed-solomon-erasure = "6.0.0"
+reed-solomon-16 = "0.1.0"
+serde = { version = "1.0.145", features = ["derive"] }
+
+primitives = { version = "0.2.0", path = "../primitives" }
+
+[dev-dependencies]
+rand = "0.8.5"

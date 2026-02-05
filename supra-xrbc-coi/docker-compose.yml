@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  influxdb:
+    image: influxdb:latest
+    container_name: "so-influx"
+    ports:
+      - '8086:8086'
+    volumes:
+      - ./DockerVolume/influx:/var/lib/influxdb2

@@ -1,0 +1,44 @@
+{
+  "network_config": {
+    "tribes": 1,
+    "clans": 1,
+    "clan_size": 125,
+    "proposers_per_tribe": 1,
+    "proposers_per_clan": 5
+  },
+  "dkg_config": {
+    "threshold": 63,
+    "participants": 125
+  },
+  "batch_config": {
+    "rule": "InfiniteLoopBack",
+    "size_in_bytes": 5000000
+  },
+  "block_config": {
+    "timeout_in_secs": 10.0,
+    "batch_count": 5
+  },
+  "networking_config": {
+    "xrbc_port": 3050
+  },
+  "delivery_config": {
+    "Rs16": {
+      "committee_erasure_config": {
+        "data_shards": 63,
+        "parity_shards": 62
+      },
+      "garbage_collector_config": {
+        "task_stale_timeout": 5,
+        "garbage_collection_timeout": 5
+      },
+      "state_idle_time_config": {
+        "state_idle_timeout": 2
+      },
+      "dissemination_rule": {
+        "Partial": {
+          "Left": 63
+        }
+      }
+    }
+  }
+}

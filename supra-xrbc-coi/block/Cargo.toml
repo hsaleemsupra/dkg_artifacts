@@ -1,0 +1,15 @@
+[package]
+name = "block"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.21.2", features = ["full"]}
+serde= {version = "1.0.152" }
+serde-big-array = { version = "0.5.0" }
+log = { version = "0.4.17" }
+serde_with = { version = "3.0.0"}
+
+primitives = {version = "0.2.0", path="../primitives"}

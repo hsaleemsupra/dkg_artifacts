@@ -1,0 +1,5 @@
+python-dotenv
+psutil
+fabric
+boto3
+pandas

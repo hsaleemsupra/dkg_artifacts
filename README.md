@@ -13,7 +13,7 @@ The simplest way to run the benchmarks is using a docker container
 2. Once the docker engine is installed and running, clone this repo and build the docker image as follows:
 
     ```
-     cd dkg_artifact
+     cd dkg_artifacts
      docker build -t dkg_app .
     ```
     
@@ -43,7 +43,7 @@ Alternately, running the benchmarks directly on the host machine requires manual
 3. Clone the repo and run:
 
     ```
-    cd dkg_artifact
+    cd dkg_artifacts
     cargo build --release
     cargo bench --bench dkg_bench -- --quick 
     ```
